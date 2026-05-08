@@ -12,14 +12,14 @@ const products = {
     {
       name: "Latte",
       desc: "Yumuşak içimli espresso ve süt karışımı.",
-      details:
-        "Espresso + buharda süt + hafif süt köpüğü. Orta kafein seviyesine sahiptir.",
+      image: "/images/latte.jpg",
+      details: "Espresso + süt + köpük",
     },
     {
       name: "Cappuccino",
       desc: "Klasik İtalyan kahvesi.",
-      details:
-        "Espresso, sıcak süt ve yoğun süt köpüğü ile hazırlanır.",
+      image: "/images/latte.jpg",
+      details: "Espresso + süt + köpük",
     },
   ],
 
@@ -27,8 +27,8 @@ const products = {
     {
       name: "Iced Americano",
       desc: "Ferahlık veren soğuk kahve.",
-      details:
-        "Espresso + soğuk su + buz. Şekersiz, düşük kalorili.",
+      image: "/images/iced-coffee.jpg",
+      details: "Espresso + buz + su",
     },
   ],
 
@@ -36,20 +36,11 @@ const products = {
     {
       name: "Waffle",
       desc: "Taze waffle çeşitleri.",
-      details: "Alt çeşitler mevcut.",
+      image: "/images/waffle.jpg",
+      details: "Çikolata, meyve, sos",
       subItems: [
-        {
-          name: "Classic Waffle",
-          desc: "Çikolata ve muz ile klasik sunum.",
-        },
-        {
-          name: "Strawberry Waffle",
-          desc: "Taze çilek ve çikolata sosu.",
-        },
-        {
-          name: "Lotus Waffle",
-          desc: "Lotus bisküvi ve özel sos.",
-        },
+        { name: "Classic Waffle", desc: "Çikolata + muz" },
+        { name: "Strawberry Waffle", desc: "Çilek + çikolata" },
       ],
     },
   ],
@@ -58,7 +49,8 @@ const products = {
     {
       name: "Tost",
       desc: "Kaşarlı sıcak tost.",
-      details: "Taze ekmek, kaşar peyniri ile hazırlanır.",
+      image: "/images/tost.jpg",
+      details: "Eritilmiş kaşar",
     },
   ],
 }
@@ -72,23 +64,34 @@ function App() {
 
       {/* HEADER */}
       <div className="text-center mb-6">
-        <div className="w-16 h-16 mx-auto bg-white text-black rounded-full flex items-center justify-center font-bold mb-2">
-          exampleLogo
-        </div>
-        <h1 className="text-2xl font-bold">exampleName</h1>
+        <img
+          src="/logo.jpg"
+          className="w-16 h-16 mx-auto mb-2 rounded-full object-cover"
+        />
+        <h1 className="text-2xl font-bold tracking-wide">AHK Cafe</h1>
         <p className="text-gray-400 text-sm">Dijital Menü</p>
       </div>
 
-      {/* CATEGORY VIEW */}
+      {/* CATEGORY */}
       {!category && (
         <div className="grid gap-4">
           {categories.map((c) => (
             <button
               key={c.id}
               onClick={() => setCategory(c.id)}
-              className="bg-[#1c1c1c] p-5 rounded-2xl text-left active:scale-95 transition"
+              className="
+                bg-gradient-to-br from-[#1c1c1c] to-[#0f0f0f]
+                p-6 rounded-2xl text-left
+                border border-white/10
+                active:scale-[0.98]
+                transition
+                shadow-lg
+              "
             >
-              {c.name}
+              <div className="text-lg font-semibold">{c.name}</div>
+              <div className="text-xs text-gray-400 mt-1">
+                Menüye göz at
+              </div>
             </button>
           ))}
         </div>
@@ -101,7 +104,7 @@ function App() {
             onClick={() => setCategory(null)}
             className="text-gray-400 text-sm mb-4"
           >
-            ← Kategorilere dön
+            ← Geri
           </button>
 
           <h2 className="text-xl font-bold mb-4">
@@ -113,10 +116,32 @@ function App() {
               <div
                 key={i}
                 onClick={() => setSelectedProduct(p)}
-                className="bg-[#1c1c1c] p-4 rounded-2xl active:scale-95 transition cursor-pointer"
+                className="
+                  bg-gradient-to-br from-[#1c1c1c] to-[#0f0f0f]
+                  p-4 rounded-2xl
+                  border border-white/10
+                  active:scale-[0.98]
+                  hover:scale-[1.01] hover:border-white/20
+                  transition
+                  cursor-pointer
+                  shadow-lg
+                  flex gap-4 items-center
+                  min-h-[110px]
+                "
               >
-                <h3 className="font-semibold">{p.name}</h3>
-                <p className="text-sm text-gray-400">{p.desc}</p>
+                {/* IMAGE LEFT */}
+                {p.image && (
+                  <img
+                    src={p.image}
+                    className="w-24 h-24 object-cover rounded-xl flex-shrink-0"
+                  />
+                )}
+
+                {/* TEXT RIGHT */}
+                <div className="flex flex-col justify-center">
+                  <h3 className="font-semibold">{p.name}</h3>
+                  <p className="text-sm text-gray-400">{p.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -134,6 +159,13 @@ function App() {
           </button>
 
           <div className="bg-[#1c1c1c] p-5 rounded-2xl">
+            {selectedProduct.image && (
+              <img
+                src={selectedProduct.image}
+                className="w-full h-48 object-cover rounded-xl mb-4"
+              />
+            )}
+
             <h2 className="text-xl font-bold mb-2">
               {selectedProduct.name}
             </h2>
@@ -147,22 +179,28 @@ function App() {
             </p>
           </div>
 
-          {/* WAFFLE SUB ITEMS */}
+          {/* SUB ITEMS */}
           {selectedProduct.subItems && (
-            <div className="mt-4 space-y-3">
-              <h3 className="text-sm text-gray-400">
+            <div className="mt-6">
+              <h3 className="text-sm text-gray-400 mb-3">
                 Çeşitler
               </h3>
 
-              {selectedProduct.subItems.map((s, i) => (
-                <div
-                  key={i}
-                  className="bg-[#151515] p-4 rounded-2xl"
-                >
-                  <h4 className="font-semibold">{s.name}</h4>
-                  <p className="text-sm text-gray-400">{s.desc}</p>
-                </div>
-              ))}
+              <div className="grid gap-3">
+                {selectedProduct.subItems.map((s, i) => (
+                  <div
+                    key={i}
+                    className="
+                      bg-gradient-to-br from-[#151515] to-[#0f0f0f]
+                      p-4 rounded-2xl
+                      border border-white/10
+                    "
+                  >
+                    <h4 className="font-semibold">{s.name}</h4>
+                    <p className="text-sm text-gray-400">{s.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
