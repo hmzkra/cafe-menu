@@ -552,38 +552,75 @@ const products = {
   ],
 
   games: [
-    {
-      section: "Kutu Oyunları",
-      items: [
-        {
-          name: "Tavla",
-          price: "Ücretsiz",
-          image: "/images/games.jpg",
-          desc: "Klasik masa oyunu.",
-          details:
-            "Arkadaşlarınla keyifli vakit geçir.",
-        },
-
-        {
-          name: "Okey",
-          price: "Ücretsiz",
-          image: "/images/games.jpg",
-          desc: "Popüler taş oyunu.",
-          details:
-            "4 kişilik eğlenceli oyun deneyimi.",
-        },
-
-        {
-          name: "Uno",
-          price: "Ücretsiz",
-          image: "/images/games.jpg",
-          desc: "Kart oyunu.",
-          details:
-            "Arkadaş grubuyla eğlenceli zaman geçir.",
-        },
-      ],
-    },
-  ],
+  {
+    section: "Kutu Oyunları",
+    items: [
+      {
+        name: "Tavla",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Klasik tavla oyunu.",
+        details: "2 kişi oynanır, strateji ve şans içerir.",
+      },
+      {
+        name: "Okey",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Taş dizme oyunu.",
+        details: "4 kişiyle oynanan geleneksel oyun.",
+      },
+      {
+        name: "Monopoly",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Mülk yönetim oyunu.",
+        details: "Strateji ve para yönetimi içerir.",
+      },
+      {
+        name: "Satranç",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Zeka oyunu.",
+        details: "İki kişi arasında stratejik savaş.",
+      },
+      {
+        name: "İskambil",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Kart oyunları.",
+        details: "Birçok farklı oyun türü içerir.",
+      },
+      {
+        name: "Tabu",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Kelime anlatma oyunu.",
+        details: "Takım halinde oynanır.",
+      },
+      {
+        name: "Uno",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Kart eşleştirme oyunu.",
+        details: "Renk ve sayı uyum oyunu.",
+      },
+      {
+        name: "Dedektif",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Mantık oyunu.",
+        details: "İpuçlarını takip ederek çözüm bulma.",
+      },
+      {
+        name: "Katil Kim",
+        price: "Ücretsiz",
+        image: "/images/games.jpg",
+        desc: "Sosyal çıkarım oyunu.",
+        details: "Katili bulma üzerine kurulu eğlenceli oyun.",
+      },
+    ],
+  },
+],
 }
 
 function App() {
