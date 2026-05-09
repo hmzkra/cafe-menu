@@ -138,8 +138,7 @@ const products = {
         "İskambil",
         "Tabu",
         "Uno",
-        "Dedektif",
-        "Katil Kim",
+        "Dedektif Katil Kim",
       ],
     },
   ],
@@ -150,7 +149,24 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-black text-white p-5">
+      {/* HEADER */}
+<div className="flex flex-col items-center mb-6">
 
+  <img
+    src="/logo.jpg"
+    alt="AHK Coffee"
+    className="w-20 h-20 rounded-full object-cover mb-2"
+  />
+
+  <h1 className="text-2xl font-bold tracking-wide">
+    AHK Coffee
+  </h1>
+
+  <p className="text-gray-400 text-sm">
+    Dijital Menü
+  </p>
+
+</div>
       {/* CATEGORY */}
       {!category && (
         <div className="grid gap-3">
