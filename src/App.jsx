@@ -91,7 +91,7 @@ const products = {
         { name: "Margarita", price: "240₺" },
         { name: "Blue Hawaii", price: "240₺" },
         { name: "Cosmopolitan", price: "240₺" },
-        { name: "Sex on the Beach", price: "240₺" },
+        { name: "X on the Beach", price: "240₺" },
         { name: "Bubble Gum", price: "240₺" },
       ],
     },
