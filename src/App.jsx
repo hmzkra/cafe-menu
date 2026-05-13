@@ -71,12 +71,14 @@ const products = {
       items: [
         { name: "Ice Americano", price: "150₺" },
         { name: "Ice Latte", price: "175₺" },
+        { name: "Aromalı Ice Latte", price: "200₺" },
         { name: "Ice Mocha", price: "185₺" },
         { name: "Caramel Macchiato", price: "185₺" },
         { name: "Cold Brew", price: "240₺" },
         { name: "Frappe", price: "185₺" },
-        { name: "Flat White", price: "190₺" },
         { name: "Aromalı Frappe", price: "200₺" },
+        { name: "Flat White", price: "190₺" },
+        
       ],
     },
 
@@ -187,8 +189,7 @@ const products = {
         "İskambil",
         "Tabu",
         "Uno",
-        "Dedektif",
-        "Katil Kim",
+        "Dedektif Katil Kim",        
       ],
     },
   ],
