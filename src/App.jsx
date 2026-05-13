@@ -361,6 +361,30 @@ export default function App() {
             ))}
 
           </div>
+          {/* BOTTOM BACK BUTTON */}
+<div className="mt-10 flex justify-center">
+
+  <button
+    onClick={() => {
+      setCategory(null)
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    }}
+    className="
+      bg-[#1a1a1a]
+      px-6 py-3
+      rounded-2xl
+      border border-white/10
+      text-sm
+      font-medium
+    "
+  >
+    ← Kategorilere Dön
+  </button>
+
+</div>
 
         </div>
       )}
