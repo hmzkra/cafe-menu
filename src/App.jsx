@@ -42,7 +42,7 @@ const products = {
         { name: "Paçanga böreği", price: "320₺" },
         { name: "Soğuk-sıcak sandviç çeşitleri", price: "260₺" },
       ],
-    }
+    },
 
     /*{
       section: "Tostlar",
