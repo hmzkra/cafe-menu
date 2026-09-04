@@ -11,14 +11,14 @@ const categories = [
 
 const products = {
   food: [
-    {
+    /*{
       section: "Serpme Kahvaltı",
       desc:
         "2 çeşit peynir, 2 çeşit zeytin, domates, salatalık, 2 çeşit reçel, sigara böreği, sosis, patates, yumurta, çikolata, bal, tereyağı",
       price: "850₺",
-    },
+    },*/
 
-    {
+    /*{
       section: "Aparatifler",
       items: [
         { name: "Menemen", price: "220₺" },
@@ -29,16 +29,29 @@ const products = {
         { name: "Patates Kızartması", price: "180₺" },
         { name: "Soğuk-sıcak sandviç çeşitleri", price: "230₺" },
       ],
-    },
+    },*/
 
     {
+      section: "Yemekler",
+      items: [
+        { name: "Schnitzel", price: "380₺" },
+        { name: "Chicken gordon blue", price: "470₺" },
+        { name: "Mantı ", price: "320₺" },
+        { name: "Patates kızartması", price: "230₺" },
+        { name: "<Cıtır tavuk sepeti", price: "380₺" },
+        { name: "Paçanga böreği", price: "320₺" },
+        { name: "Soğuk-sıcak sandviç çeşitleri", price: "260₺" },
+      ],
+    }
+
+    /*{
       section: "Tostlar",
       items: [
         { name: "Karışık ", price: "250₺" },
         { name: "Kaşarlı", price: "220₺" },
         { name: "3 peynirli", price: "230₺" },        
       ],
-    },
+    },*/
 
     {
       section: "Makarna&Mantı",
@@ -177,12 +190,12 @@ const products = {
         { name: "Cookies", price: "90₺" },
         { name: "Dilim Pasta", price: "220₺" },
         { name: "Magnolia", price: "120₺" },
-        { name: "Sütlaç", price: "190₺" },
-        { name: "Tiramisu", price: "190₺" },
-        { name: "Valovan", price: "120₺" },
+        //{ name: "Sütlaç", price: "190₺" },
+        //{ name: "Tiramisu", price: "190₺" },
+        //{ name: "Valovan", price: "120₺" },
         { name: "Cheesecake", price: "180₺" },
-        { name: "Top Dondurma", price: "70₺" },
-        { name: "Cup Dondurma", price: "230₺" },
+        { name: "Top Dondurma", price: "50₺" },
+        { name: "Cup Dondurma", price: "140₺" },
       ],
     },
   ],
