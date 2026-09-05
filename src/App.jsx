@@ -32,15 +32,14 @@ const products = {
     },*/
 
     {
-      section: "Yemekler",
+      section: "Yiyecekler",
       items: [
         { name: "Schnitzel", price: "380₺" },
-        { name: "Chicken gordon blue", price: "470₺" },
-        { name: "Mantı ", price: "320₺" },
-        { name: "Patates kızartması", price: "230₺" },
-        { name: "Cıtır tavuk sepeti", price: "380₺" },
-        { name: "Paçanga böreği", price: "320₺" },
-        { name: "Soğuk-sıcak sandviç çeşitleri", price: "260₺" },
+        { name: "Chicken Gordon Blue", price: "470₺" },
+        { name: "Patates Kızartması", price: "230₺" },
+        { name: "Çıtır Tavuk Sepeti", price: "380₺" },
+        { name: "Paçanga Böreği", price: "320₺" },
+        { name: "Soğuk-Sıcak Sandviç Çeşitleri", price: "260₺" },
       ],
     },
 
